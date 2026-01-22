@@ -242,10 +242,40 @@
       <button class="btn" onclick="openModal()">Obter Script</button>
     </div>
 
-    <footer>
-      © <span id="current-year"></span> VuskScripts — todos os direitos reservados.
-    </footer>
+  <div class="overlay" id="overlay">
+    <div class="modal">
+      <h3>Escolha um encurtador</h3>
+      <a href="https://linkvertise.com" target="_blank">Linkvertise</a>
+      <a href="https://lootlabs.gg" target="_blank">LootLabs</a>
+      <a href="https://example.com" target="_blank">Alternativo</a>
+      <button class="close" onclick="closeModal()">Cancelar</button>
+    </div>
   </div>
+
+    <div class="card">
+      <h2 class="script-title">Script de Teste</h2>
+      <p class="script-desc">Página de teste do modelo oficial do VuskScripts.</p>
+
+      <div class="script-warning">
+        <strong>Aviso:</strong> ao utilizar este script, o usuário assume total responsabilidade por quaisquer consequências.
+      </div>
+
+      <h3>Funções</h3>
+      <ul>
+        <li>Auto Farm</li>
+        <li>ESP</li>
+        <li>Auto Sell</li>
+        <li>Speed Boost</li>
+      </ul>
+
+      <h3>Créditos</h3>
+      <ul>
+        <li>Autor: Vusk</li>
+        <li>Base: Script Base Genérico</li>
+      </ul>
+
+      <button class="btn" onclick="openModal()">Obter Script</button>
+    </div>
 
   <div class="overlay" id="overlay">
     <div class="modal">
@@ -257,40 +287,11 @@
     </div>
   </div>
 
-  <div class="card">
-  <h2 class="script-title">Script de Teste</h2>
-  <p class="script-desc">Página de teste do modelo oficial do VuskScripts.</p>
-
-  <div class="script-warning">
-    <strong>Aviso:</strong> ao utilizar este script, o usuário assume total responsabilidade por quaisquer consequências.
-  </div>
-
-  <h3>Funções</h3>
-  <ul>
-    <li>Auto Farm</li>
-    <li>ESP</li>
-    <li>Auto Sell</li>
-    <li>Speed Boost</li>
-  </ul>
-
-  <h3>Créditos</h3>
-  <ul>
-    <li>Autor: Vusk</li>
-    <li>Base: Script Base Genérico</li>
-  </ul>
-
-  <button class="btn" onclick="openModal()">Obter Script</button>
+        <footer>
+      © <span id="current-year"></span> VuskScripts — todos os direitos reservados.
+    </footer>
   </div>
   
-  <script>
-    function openModal() {
-      document.getElementById('overlay').style.display = 'flex';
-    }
-
-    function closeModal() {
-      document.getElementById('overlay').style.display = 'none';
-    }
-
     // Atualiza o ano automaticamente no footer
     document.getElementById('current-year').textContent = new Date().getFullYear();
   </script>
