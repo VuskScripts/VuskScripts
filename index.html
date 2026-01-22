@@ -227,30 +227,20 @@
 
       <h3>Funções</h3>
       <ul>
-        <li>Auto Farm</li>
-        <li>ESP</li>
-        <li>Auto Sell</li>
-        <li>Speed Boost</li>
+        <li>• Auto Farm</li>
+        <li>• ESP</li>
+        <li>• Auto Sell</li>
+        <li>• Speed Boost</li>
       </ul>
 
       <h3>Créditos</h3>
       <ul>
-        <li>Autor: Vusk</li>
-        <li>Base: Script Base Genérico</li>
+        <li>• Autor: Vusk</li>
+        <li>• Base: Script Base Genérico</li>
       </ul>
 
       <button class="btn" onclick="openModal()">Obter Script</button>
     </div>
-
-  <div class="overlay" id="overlay">
-    <div class="modal">
-      <h3>Escolha um encurtador</h3>
-      <a href="https://linkvertise.com" target="_blank">Linkvertise</a>
-      <a href="https://lootlabs.gg" target="_blank">LootLabs</a>
-      <a href="https://example.com" target="_blank">Alternativo</a>
-      <button class="close" onclick="closeModal()">Cancelar</button>
-    </div>
-  </div>
 
     <div class="card">
       <h2 class="script-title">Script de Teste</h2>
@@ -262,38 +252,55 @@
 
       <h3>Funções</h3>
       <ul>
-        <li>Auto Farm</li>
-        <li>ESP</li>
-        <li>Auto Sell</li>
-        <li>Speed Boost</li>
+        <li>• Auto Farm</li>
+        <li>• ESP</li>
+        <li>• Auto Sell</li>
+        <li>• Speed Boost</li>
       </ul>
 
       <h3>Créditos</h3>
       <ul>
-        <li>Autor: Vusk</li>
-        <li>Base: Script Base Genérico</li>
+        <li>• Autor: Vusk</li>
+        <li>• Base: Script Base Genérico</li>
       </ul>
 
       <button class="btn" onclick="openModal()">Obter Script</button>
     </div>
 
+    <footer>
+      © <span id="current-year">2025</span> VuskScripts — todos os direitos reservados.
+    </footer>
+  </div>
+
   <div class="overlay" id="overlay">
     <div class="modal">
       <h3>Escolha um encurtador</h3>
-      <a href="https://linkvertise.com" target="_blank">Linkvertise</a>
-      <a href="https://lootlabs.gg" target="_blank">LootLabs</a>
-      <a href="https://example.com" target="_blank">Alternativo</a>
+      <a href="https://linkvertise.com/SEU-LINK-AQUI" target="_blank">Linkvertise</a>
+      <a href="https://lootlabs.gg/SEU-LINK-AQUI" target="_blank">LootLabs</a>
+      <a href="https://SEU-LINK-ALTERNATIVO.com" target="_blank">Alternativo</a>
       <button class="close" onclick="closeModal()">Cancelar</button>
     </div>
   </div>
 
-        <footer>
-      © <span id="current-year"></span> VuskScripts — todos os direitos reservados.
-    </footer>
-  </div>
-  
-    // Atualiza o ano automaticamente no footer
+  <script>
+    // Atualiza o ano automaticamente no footer (fallback já está no HTML)
     document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Funções do modal
+    function openModal() {
+      document.getElementById('overlay').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('overlay').style.display = 'none';
+    }
+
+    // Fecha o modal ao clicar fora dele
+    document.getElementById('overlay').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
   </script>
 </body>
-        </html>
+</html>
