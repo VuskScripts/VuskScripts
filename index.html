@@ -217,8 +217,9 @@
       </p>
     </div>
 
+    <!-- Primeiro card - atualizado com o novo título e funções -->
     <div class="card">
-      <h2 class="script-title">Script de Teste</h2>
+      <h2 class="script-title">Build a Boat for Treasure - 001</h2>
       <p class="script-desc">Página de teste do modelo oficial do VuskScripts.</p>
 
       <div class="script-warning">
@@ -227,10 +228,10 @@
 
       <h3>Funções</h3>
       <ul>
-        <li>• Auto Farm</li>
-        <li>• ESP</li>
-        <li>• Auto Sell</li>
-        <li>• Speed Boost</li>
+        <li>• Auto farm gold</li>
+        <li>• Auto Build (key auto build)</li>
+        <li>• Hidden farm</li>
+        <li>• Auto farm gold block</li>
       </ul>
 
       <h3>Créditos</h3>
@@ -242,6 +243,7 @@
       <button class="btn" onclick="openModal()">Obter Script</button>
     </div>
 
+    <!-- Segundo card mantido como estava -->
     <div class="card">
       <h2 class="script-title">Script de Teste</h2>
       <p class="script-desc">Página de teste do modelo oficial do VuskScripts.</p>
@@ -268,34 +270,35 @@
     </div>
 
     <footer>
-      © <span id="current-year">2025</span> VuskScripts — todos os direitos reservados.
+      © <span id="current-year"></span> VuskScripts — todos os direitos reservados.
     </footer>
   </div>
 
   <div class="overlay" id="overlay">
     <div class="modal">
       <h3>Escolha um encurtador</h3>
-      <a href="https://linkvertise.com/SEU-LINK-AQUI" target="_blank">Linkvertise</a>
-      <a href="https://lootlabs.gg/SEU-LINK-AQUI" target="_blank">LootLabs</a>
-      <a href="https://SEU-LINK-ALTERNATIVO.com" target="_blank">Alternativo</a>
+      <a href="https://linkvertise.com/SEU-LINK-AQUI" target="_blank" rel="noopener noreferrer">Linkvertise</a>
+      <a href="https://lootlabs.gg/SEU-LINK-AQUI" target="_blank" rel="noopener noreferrer">LootLabs</a>
+      <a href="https://SEU-LINK-ALTERNATIVO.com" target="_blank" rel="noopener noreferrer">Alternativo</a>
       <button class="close" onclick="closeModal()">Cancelar</button>
     </div>
   </div>
 
   <script>
-    // Atualiza o ano automaticamente no footer (fallback já está no HTML)
+    // Atualiza o ano automaticamente
     document.getElementById('current-year').textContent = new Date().getFullYear();
 
-    // Funções do modal
+    // Abre o modal
     function openModal() {
       document.getElementById('overlay').style.display = 'flex';
     }
 
+    // Fecha o modal
     function closeModal() {
       document.getElementById('overlay').style.display = 'none';
     }
 
-    // Fecha o modal ao clicar fora dele
+    // Fecha ao clicar fora do modal
     document.getElementById('overlay').addEventListener('click', function(e) {
       if (e.target === this) {
         closeModal();
@@ -303,4 +306,4 @@
     });
   </script>
 </body>
-</html>
+                                                                                                        </html>
