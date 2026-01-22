@@ -14,11 +14,7 @@
       --danger: #ef4444;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -26,19 +22,10 @@
       color: var(--text);
     }
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 24px;
-    }
+    .container { max-width: 900px; margin: 0 auto; padding: 24px; }
 
-    h1, h2, h3 {
-      margin-bottom: 12px;
-    }
-
-    p {
-      line-height: 1.6;
-    }
+    h1, h2, h3 { margin-bottom: 12px; }
+    p { line-height: 1.6; }
 
     .main-warning {
       background: #1a0f12;
@@ -55,10 +42,7 @@
       margin-bottom: 14px;
     }
 
-    .main-warning p {
-      text-align: center;
-      color: #fca5a5;
-    }
+    .main-warning p { text-align: center; color: #fca5a5; }
 
     .card {
       background: var(--card);
@@ -68,15 +52,8 @@
       box-shadow: 0 12px 30px rgba(0,0,0,0.5);
     }
 
-    .script-title {
-      font-size: 34px;
-      margin-bottom: 8px;
-    }
-
-    .script-desc {
-      color: var(--muted);
-      margin-bottom: 22px;
-    }
+    .script-title { font-size: 34px; margin-bottom: 8px; }
+    .script-desc { color: var(--muted); margin-bottom: 22px; }
 
     .script-warning {
       background: #111827;
@@ -87,14 +64,8 @@
       color: #c7d2fe;
     }
 
-    ul {
-      padding-left: 20px;
-      margin-bottom: 20px;
-    }
-
-    li {
-      margin-bottom: 6px;
-    }
+    ul { padding-left: 20px; margin-bottom: 20px; }
+    li { margin-bottom: 6px; }
 
     .btn {
       display: inline-block;
@@ -108,9 +79,7 @@
       cursor: pointer;
     }
 
-    .btn:hover {
-      opacity: 0.9;
-    }
+    .btn:hover { opacity: 0.9; }
 
     footer {
       margin-top: 40px;
@@ -119,6 +88,7 @@
       color: var(--muted);
     }
 
+    /* Estilos dos modais */
     .overlay {
       position: fixed;
       inset: 0;
@@ -138,10 +108,7 @@
       text-align: center;
     }
 
-    .modal h3 {
-      margin-bottom: 18px;
-    }
-
+    .modal h3 { margin-bottom: 18px; }
     .modal a {
       display: block;
       background: #1f2933;
@@ -152,9 +119,7 @@
       margin-bottom: 10px;
     }
 
-    .modal a:hover {
-      background: var(--accent);
-    }
+    .modal a:hover { background: var(--accent); }
 
     .close {
       background: transparent;
@@ -187,15 +152,9 @@
     }
 
     @media (max-width: 768px) {
-      .site-title {
-        font-size: 42px;
-      }
-      .site-subtitle {
-        font-size: 18px;
-      }
-      header {
-        padding: 40px 15px 25px;
-      }
+      .site-title { font-size: 42px; }
+      .site-subtitle { font-size: 18px; }
+      header { padding: 40px 15px 25px; }
     }
   </style>
 </head>
@@ -209,15 +168,10 @@
   <div class="container">
     <div class="main-warning">
       <h1>AVISO</h1>
-      <p>
-        Isenção de responsabilidade: não nos responsabilizamos por banimentos,
-        suspensões, perdas de conta ou quaisquer outras penalidades decorrentes do
-        uso destes scripts. A utilização é de inteira responsabilidade do
-        usuário, que assume todos os riscos envolvidos.
-      </p>
+      <p>Isenção de responsabilidade: não nos responsabilizamos por banimentos, suspensões, perdas de conta ou quaisquer outras penalidades decorrentes do uso destes scripts. A utilização é de inteira responsabilidade do usuário, que assume todos os riscos envolvidos.</p>
     </div>
 
-    <!-- Primeiro card - atualizado com o novo título e funções -->
+    <!-- Primeiro card -->
     <div class="card">
       <h2 class="script-title">Build a Boat for Treasure - 001</h2>
       <p class="script-desc">Página de teste do modelo oficial do VuskScripts.</p>
@@ -237,13 +191,13 @@
       <h3>Créditos</h3>
       <ul>
         <li>• Autor: desconhecido</li>
-        <li>• destribuido por: VuskScripts</li>
+        <li>• distribuído por: VuskScripts</li>
       </ul>
 
-      <button class="btn" onclick="openModal()">Obter Script</button>
+      <button class="btn" onclick="openModal1()">Obter Script</button>
     </div>
 
-    <!-- Segundo card mantido como estava -->
+    <!-- Segundo card -->
     <div class="card">
       <h2 class="script-title">Script de Teste</h2>
       <p class="script-desc">Página de teste do modelo oficial do VuskScripts.</p>
@@ -263,10 +217,10 @@
       <h3>Créditos</h3>
       <ul>
         <li>• Autor: Desconhecido</li>
-        <li>• Destribuido por: VuskScripts</li>
+        <li>• Distribuído por: VuskScripts</li>
       </ul>
 
-      <button class="btn" onclick="openModal()">Obter Script</button>
+      <button class="btn" onclick="openModal2()">Obter Script</button>
     </div>
 
     <footer>
@@ -274,36 +228,53 @@
     </footer>
   </div>
 
-  <div class="overlay" id="overlay">
+  <!-- Modal 1 - para o primeiro card -->
+  <div class="overlay" id="overlay1">
     <div class="modal">
-      <h3>Escolha um encurtador</h3>
-      <a href="https://linkvertise.com/SEU-LINK-AQUI" target="_blank" rel="noopener noreferrer">Linkvertise</a>
-      <a href="https://lootlabs.gg/SEU-LINK-AQUI" target="_blank" rel="noopener noreferrer">LootLabs</a>
-      <a href="https://SEU-LINK-ALTERNATIVO.com" target="_blank" rel="noopener noreferrer">Alternativo</a>
-      <button class="close" onclick="closeModal()">Cancelar</button>
+      <h3>Build a Boat - 001</h3>
+      <a href="https://linkvertise.com/SEU-LINK-001-AQUI" target="_blank" rel="noopener noreferrer">Linkvertise</a>
+      <a href="https://loot-link.com/s?B14u7GNO" target="_blank" rel="noopener noreferrer">LootLabs</a>
+      <a href="https://SEU-LINK-ALTERNATIVO-001.com" target="_blank" rel="noopener noreferrer">Alternativo</a>
+      <button class="close" onclick="closeModal1()">Cancelar</button>
+    </div>
+  </div>
+
+  <!-- Modal 2 - para o segundo card -->
+  <div class="overlay" id="overlay2">
+    <div class="modal">
+      <h3>Script de Teste</h3>
+      <a href="https://linkvertise.com/SEU-LINK-002-AQUI" target="_blank" rel="noopener noreferrer">Linkvertise</a>
+      <a href="https://lootlabs.gg/SEU-LINK-002-AQUI" target="_blank" rel="noopener noreferrer">LootLabs</a>
+      <a href="https://SEU-LINK-ALTERNATIVO-002.com" target="_blank" rel="noopener noreferrer">Alternativo</a>
+      <button class="close" onclick="closeModal2()">Cancelar</button>
     </div>
   </div>
 
   <script>
-    // Atualiza o ano automaticamente
+    // Ano automático
     document.getElementById('current-year').textContent = new Date().getFullYear();
 
-    // Abre o modal
-    function openModal() {
-      document.getElementById('overlay').style.display = 'flex';
+    // Modal 1 (Build a Boat)
+    function openModal1() {
+      document.getElementById('overlay1').style.display = 'flex';
     }
-
-    // Fecha o modal
-    function closeModal() {
-      document.getElementById('overlay').style.display = 'none';
+    function closeModal1() {
+      document.getElementById('overlay1').style.display = 'none';
     }
+    document.getElementById('overlay1').addEventListener('click', function(e) {
+      if (e.target === this) closeModal1();
+    });
 
-    // Fecha ao clicar fora do modal
-    document.getElementById('overlay').addEventListener('click', function(e) {
-      if (e.target === this) {
-        closeModal();
-      }
+    // Modal 2 (Teste)
+    function openModal2() {
+      document.getElementById('overlay2').style.display = 'flex';
+    }
+    function closeModal2() {
+      document.getElementById('overlay2').style.display = 'none';
+    }
+    document.getElementById('overlay2').addEventListener('click', function(e) {
+      if (e.target === this) closeModal2();
     });
   </script>
 </body>
-                                                                                                        </html>
+</html>
