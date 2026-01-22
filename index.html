@@ -1,0 +1,221 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VuskScripts • Página de Script</title>  <style>
+    :root {
+      --bg: #0b0b0f;
+      --card: #141418;
+      --accent: #8b5cf6;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --danger: #ef4444;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 12px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .main-warning {
+      background: #1a0f12;
+      border: 2px solid var(--danger);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+
+    .main-warning h1 {
+      text-align: center;
+      color: var(--danger);
+      font-size: 40px;
+      margin-bottom: 14px;
+    }
+
+    .main-warning p {
+      text-align: center;
+      color: #fca5a5;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+    }
+
+    .script-title {
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+
+    .script-desc {
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .script-warning {
+      background: #111827;
+      border-left: 4px solid var(--accent);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-bottom: 22px;
+      color: #c7d2fe;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 14px 30px;
+      border-radius: 999px;
+      font-weight: bold;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .modal {
+      background: #0b0b10;
+      border-radius: 18px;
+      padding: 26px;
+      width: 100%;
+      max-width: 360px;
+      text-align: center;
+    }
+
+    .modal h3 {
+      margin-bottom: 18px;
+    }
+
+    .modal a {
+      display: block;
+      background: #1f2933;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .modal a:hover {
+      background: var(--accent);
+    }
+
+    .close {
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      margin-top: 12px;
+      cursor: pointer;
+    }
+  </style></head>
+<body>  <div class="container"><div class="main-warning">
+  <h1>AVISO</h1>
+  <p>
+    Isenção de responsabilidade: não nos responsabilizamos por banimentos,
+    suspensões, perdas de conta ou quaisquer outras penalidades decorrentes do
+    uso destes scripts. A utilização é de inteira responsabilidade do
+    usuário, que assume todos os riscos envolvidos.
+  </p>
+</div>
+
+<div class="card">
+  <h2 class="script-title">Script de Teste</h2>
+  <p class="script-desc">Página de teste do modelo oficial do VuskScripts.</p>
+
+  <div class="script-warning">
+    <strong>Aviso:</strong> ao utilizar este script, o usuário assume total responsabilidade por quaisquer consequências.
+  </div>
+
+  <h3>Funções</h3>
+  <ul>
+    <li>Auto Farm</li>
+    <li>ESP</li>
+    <li>Auto Sell</li>
+    <li>Speed Boost</li>
+  </ul>
+
+  <h3>Créditos</h3>
+  <ul>
+    <li>Autor: Vusk</li>
+    <li>Base: Script Base Genérico</li>
+  </ul>
+
+  <button class="btn" onclick="openModal()">Obter Script</button>
+</div>
+
+<footer>
+  © 2026 VuskScripts — todos os direitos reservados.
+</footer>
+
+  </div>  <div class="overlay" id="overlay">
+    <div class="modal">
+      <h3>Escolha um encurtador</h3>
+      <a href="https://linkvertise.com" target="_blank">Linkvertise</a>
+      <a href="https://lootlabs.gg" target="_blank">LootLabs</a>
+      <a href="https://example.com" target="_blank">Alternativo</a>
+      <button class="close" onclick="closeModal()">Cancelar</button>
+    </div>
+  </div>  <script>
+    function openModal() {
+      document.getElementById('overlay').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script></body>
+</html>
