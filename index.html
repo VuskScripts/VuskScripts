@@ -1,8 +1,10 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VuskScripts • Página de Script</title>  <style>
+  <title>VuskScripts • Página de Script</title>
+  <style>
     :root {
       --bg: #0b0b0f;
       --card: #141418;
@@ -161,47 +163,93 @@
       margin-top: 12px;
       cursor: pointer;
     }
-  </style></head>
-<body>  <div class="container"><div class="main-warning">
-  <h1>AVISO</h1>
-  <p>
-    Isenção de responsabilidade: não nos responsabilizamos por banimentos,
-    suspensões, perdas de conta ou quaisquer outras penalidades decorrentes do
-    uso destes scripts. A utilização é de inteira responsabilidade do
-    usuário, que assume todos os riscos envolvidos.
-  </p>
-</div>
 
-<div class="card">
-  <h2 class="script-title">Script de Teste</h2>
-  <p class="script-desc">Página de teste do modelo oficial do VuskScripts.</p>
+    /* Novo estilo pro header/topo */
+    header {
+      text-align: center;
+      padding: 50px 20px 30px;
+      background: linear-gradient(to bottom, #1a1a2e, var(--bg));
+      border-bottom: 3px solid var(--accent);
+    }
 
-  <div class="script-warning">
-    <strong>Aviso:</strong> ao utilizar este script, o usuário assume total responsabilidade por quaisquer consequências.
+    .site-title {
+      font-size: 56px;
+      margin: 0;
+      color: var(--accent);
+      text-shadow: 0 0 25px rgba(139, 92, 246, 0.7);
+      letter-spacing: 2px;
+    }
+
+    .site-subtitle {
+      font-size: 22px;
+      color: var(--muted);
+      margin-top: 10px;
+      font-weight: normal;
+    }
+
+    @media (max-width: 768px) {
+      .site-title {
+        font-size: 42px;
+      }
+      .site-subtitle {
+        font-size: 18px;
+      }
+      header {
+        padding: 40px 15px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Novo header com o título VuskScripts -->
+  <header>
+    <h1 class="site-title">VuskScripts</h1>
+    <p class="site-subtitle">Scripts Premium para Dominar o Jogo</p>
+  </header>
+
+  <div class="container">
+    <div class="main-warning">
+      <h1>AVISO</h1>
+      <p>
+        Isenção de responsabilidade: não nos responsabilizamos por banimentos,
+        suspensões, perdas de conta ou quaisquer outras penalidades decorrentes do
+        uso destes scripts. A utilização é de inteira responsabilidade do
+        usuário, que assume todos os riscos envolvidos.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 class="script-title">Script de Teste</h2>
+      <p class="script-desc">Página de teste do modelo oficial do VuskScripts.</p>
+
+      <div class="script-warning">
+        <strong>Aviso:</strong> ao utilizar este script, o usuário assume total responsabilidade por quaisquer consequências.
+      </div>
+
+      <h3>Funções</h3>
+      <ul>
+        <li>Auto Farm</li>
+        <li>ESP</li>
+        <li>Auto Sell</li>
+        <li>Speed Boost</li>
+      </ul>
+
+      <h3>Créditos</h3>
+      <ul>
+        <li>Autor: Vusk</li>
+        <li>Base: Script Base Genérico</li>
+      </ul>
+
+      <button class="btn" onclick="openModal()">Obter Script</button>
+    </div>
+
+    <footer>
+      © 2026 VuskScripts — todos os direitos reservados.
+    </footer>
   </div>
 
-  <h3>Funções</h3>
-  <ul>
-    <li>Auto Farm</li>
-    <li>ESP</li>
-    <li>Auto Sell</li>
-    <li>Speed Boost</li>
-  </ul>
-
-  <h3>Créditos</h3>
-  <ul>
-    <li>Autor: Vusk</li>
-    <li>Base: Script Base Genérico</li>
-  </ul>
-
-  <button class="btn" onclick="openModal()">Obter Script</button>
-</div>
-
-<footer>
-  © 2026 VuskScripts — todos os direitos reservados.
-</footer>
-
-  </div>  <div class="overlay" id="overlay">
+  <div class="overlay" id="overlay">
     <div class="modal">
       <h3>Escolha um encurtador</h3>
       <a href="https://linkvertise.com" target="_blank">Linkvertise</a>
@@ -209,7 +257,9 @@
       <a href="https://example.com" target="_blank">Alternativo</a>
       <button class="close" onclick="closeModal()">Cancelar</button>
     </div>
-  </div>  <script>
+  </div>
+
+  <script>
     function openModal() {
       document.getElementById('overlay').style.display = 'flex';
     }
@@ -217,5 +267,6 @@
     function closeModal() {
       document.getElementById('overlay').style.display = 'none';
     }
-  </script></body>
+  </script>
+</body>
 </html>
