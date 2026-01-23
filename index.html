@@ -244,6 +244,32 @@
       <button class="btn" onclick="openModal2()">Obter Script</button>
     </div>
 
+    <!-- Terceiro card -->
+    <div class="card">
+      <h2 class="script-title">Script Novo - 003</h2>
+      <p class="script-desc">Página de teste do terceiro script no modelo oficial do VuskScripts.</p>
+
+      <div class="script-warning">
+        <strong>Aviso:</strong> ao utilizar este script, o usuário assume total responsabilidade por quaisquer consequências.
+      </div>
+
+      <h3>Funções</h3>
+      <ul>
+        <li>• Auto Loot</li>
+        <li>• Speed Hack</li>
+        <li>• Invisibilidade</li>
+        <li>• Auto Skill</li>
+      </ul>
+
+      <h3>Créditos</h3>
+      <ul>
+        <li>• Autor: Desconhecido</li>
+        <li>• Distribuído por: VuskScripts</li>
+      </ul>
+
+      <button class="btn" onclick="openModal3()">Obter Script</button>
+    </div>
+
     <footer>
       © <span id="current-year"></span> VuskScripts — todos os direitos reservados.
     </footer>
@@ -271,6 +297,17 @@
     </div>
   </div>
 
+  <!-- Modal 3 - para o terceiro card -->
+  <div class="overlay" id="overlay3">
+    <div class="modal">
+      <h3>Script Novo - 003</h3>
+      <a href="https://linkvertise.com/SEU-LINK-003-AQUI" target="_blank" rel="noopener noreferrer">Linkvertise</a>
+      <a href="https://lootlabs.gg/SEU-LINK-003-AQUI" target="_blank" rel="noopener noreferrer">LootLabs</a>
+      <a href="https://SEU-LINK-ALTERNATIVO-003.com" target="_blank" rel="noopener noreferrer">Alternativo</a>
+      <button class="close" onclick="closeModal3()">Cancelar</button>
+    </div>
+  </div>
+
   <script>
     // Ano automático
     document.getElementById('current-year').textContent = new Date().getFullYear();
@@ -287,6 +324,13 @@
     function closeModal2() { document.getElementById('overlay2').style.display = 'none'; }
     document.getElementById('overlay2').addEventListener('click', function(e) {
       if (e.target === this) closeModal2();
+    });
+
+    // Modal 3
+    function openModal3() { document.getElementById('overlay3').style.display = 'flex'; }
+    function closeModal3() { document.getElementById('overlay3').style.display = 'none'; }
+    document.getElementById('overlay3').addEventListener('click', function(e) {
+      if (e.target === this) closeModal3();
     });
 
     // 🔎 Pesquisa em tempo real
