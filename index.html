@@ -80,9 +80,9 @@
       color: #c7d2fe;
     }
 
-    /* Novo aviso amarelo mediano */
+    /* Novo aviso amarelo mediano com transparência */
     .script-warning-yellow {
-      background: #fcd34d; /* amarelo mediano */
+      background: rgba(252, 211, 77, 0.7); /* amarelo transparente */
       border-left: 4px solid #d97706; /* laranja escuro */
       border-radius: 10px;
       padding: 14px 18px;
@@ -197,7 +197,6 @@
       <p>Isenção de responsabilidade: não nos responsabilizamos por banimentos, suspensões, perdas de conta ou quaisquer outras penalidades decorrentes do uso destes scripts. A utilização é de inteira responsabilidade do usuário, que assume todos os riscos envolvidos.</p>
     </div>
 
-    <!-- Barra de pesquisa -->
     <div class="search-bar">
       <input type="text" id="searchInput" placeholder="🔍 Pesquisar scripts...">
     </div>
@@ -237,7 +236,6 @@
         <strong>Aviso:</strong> ao utilizar este script, o usuário assume total responsabilidade por quaisquer consequências.
       </div>
 
-      <!-- Segundo aviso amarelo mediano -->
       <div class="script-warning-yellow">
         <strong>Aviso:</strong> o script possui Key System🔑 e algumas funções podem não estar funcionando perfeitamente.
       </div>
@@ -323,31 +321,20 @@
   </div>
 
   <script>
-    // Ano automático
     document.getElementById('current-year').textContent = new Date().getFullYear();
 
-    // Modal 1
     function openModal1() { document.getElementById('overlay1').style.display = 'flex'; }
     function closeModal1() { document.getElementById('overlay1').style.display = 'none'; }
-    document.getElementById('overlay1').addEventListener('click', function(e) {
-      if (e.target === this) closeModal1();
-    });
+    document.getElementById('overlay1').addEventListener('click', function(e) { if (e.target === this) closeModal1(); });
 
-    // Modal 2
     function openModal2() { document.getElementById('overlay2').style.display = 'flex'; }
     function closeModal2() { document.getElementById('overlay2').style.display = 'none'; }
-    document.getElementById('overlay2').addEventListener('click', function(e) {
-      if (e.target === this) closeModal2();
-    });
+    document.getElementById('overlay2').addEventListener('click', function(e) { if (e.target === this) closeModal2(); });
 
-    // Modal 3
     function openModal3() { document.getElementById('overlay3').style.display = 'flex'; }
     function closeModal3() { document.getElementById('overlay3').style.display = 'none'; }
-    document.getElementById('overlay3').addEventListener('click', function(e) {
-      if (e.target === this) closeModal3();
-    });
+    document.getElementById('overlay3').addEventListener('click', function(e) { if (e.target === this) closeModal3(); });
 
-    // 🔎 Pesquisa em tempo real
     const searchInput = document.getElementById('searchInput');
     const cards = document.querySelectorAll('.card');
 
@@ -356,11 +343,7 @@
       cards.forEach(card => {
         const title = card.querySelector('.script-title').textContent.toLowerCase();
         const desc = card.querySelector('.script-desc').textContent.toLowerCase();
-        if (title.includes(filter) || desc.includes(filter)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
+        card.style.display = (title.includes(filter) || desc.includes(filter)) ? 'block' : 'none';
       });
     });
   </script>
